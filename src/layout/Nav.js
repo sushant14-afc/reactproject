@@ -21,7 +21,7 @@ const Nav = () => {
         <>
         {redirectoHome()}
             <div className='row custom-nav-color'>
-                <div className='col-sm-12 col-md-3'>
+                <div className='col-sm-12 col-md-1'>
                     <div className='nav'>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
@@ -37,6 +37,7 @@ const Nav = () => {
                                 <li><hr class="dropdown-divider" /></li>
                                 <li><a class="dropdown-item" href="/Signup">Sign up</a></li>
                                 <li><a class="dropdown-item" href="/addbot">Add BOT</a></li>
+                                <li><a class="dropdown-item" href="/addchannel">Add Channel</a></li>
                             </ul>
                         </li></div>
                 </div>

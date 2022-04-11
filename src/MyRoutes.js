@@ -14,6 +14,9 @@ import Signup from './Pages/Signup'
 import Confirm from './Pages/Confirm'
 import Test from './Pages/Test'
 import Bots from './Pages/Bots'
+import AddChannel from './Pages/AddChannel'
+import AddChannelSuccess from './Pages/AddChannelSuccess'
+import Channel from './Pages/Channel'
 
 
 
@@ -32,10 +35,13 @@ const MyRoutes = () => {
                 <Route exact path='/signin' component={Signin}/>
                 <Route exact path='/addbot' component={AddBot}/>
                 <Route exact path='/addbotsuccess' component={AddBotSuccess}/>
+                <Route exact path='/addchannel' component={AddChannel}/>
+                <Route exact path='/addchannelsuccess' component={AddChannelSuccess}/>
                 <Route exact path='/register' component={Signup}/>
                 <Route exact path='/email/confirmation/:id' component={Test}/>
 
                 <Route exact path='/bots' component={Bots}/>
+                <Route exact path='/channel' component={Channel}/>
                 {/* <Route exact path='/test' component={Test}/> */}
             </Routes>
         </BrowserRouter>
