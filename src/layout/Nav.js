@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Redirect } from 'react-router-dom'
+import { isAuthenticated } from '../api'
+// import {isAutheticated} 
 
 const Nav = () => {
     const [user, setUser] = useState()
     const [redirect, setRedirect] = useState(false)
+    // const {user} = isAuthenticated()
+    
 
     useEffect(() => {
         setUser(
@@ -35,9 +39,16 @@ const Nav = () => {
                                 <li><a class="dropdown-item" href="/productivity">Productivity</a></li>
                                 <li><a class="dropdown-item" href="/entertainment">Entertainment</a></li>
                                 <li><hr class="dropdown-divider" /></li>
+                       {!user &&
                                 <li><a class="dropdown-item" href="/Signup">Sign up</a></li>
+                       }
+                             
+                             {user && <>
                                 <li><a class="dropdown-item" href="/addbot">Add BOT</a></li>
                                 <li><a class="dropdown-item" href="/addchannel">Add Channel</a></li>
+                                </>
+}
+
                             </ul>
                         </li></div>
                 </div>
@@ -56,11 +67,11 @@ const Nav = () => {
                     }
                      {
                         user && user.user.role ===0 &&
-                        <a className='btn btn-success mt-2 text-white fs-5' href='/signin'><i class="bi bi-box-arrow-in-left"></i>Dashboard</a>
+                        <a className='btn btn-success mt-2 text-white fs-5' href='/user/home'><i class="bi bi-box-arrow-in-left"></i>Profile</a>
                     }
                     {
                         user && user.user.role ===1 &&
-                        <a className='btn btn-success mt-2 text-white fs-5' href='/signin'><i class="bi bi-box-arrow-in-left"></i>Dashboard</a>
+                        <a className='btn btn-success mt-2 text-white fs-5' href='/admin/dashboard'><i class="bi bi-box-arrow-in-left"></i>Dashboard</a>
                     }
                     {
                         user && 

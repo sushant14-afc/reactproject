@@ -17,6 +17,10 @@ import Bots from './Pages/Bots'
 import AddChannel from './Pages/AddChannel'
 import AddChannelSuccess from './Pages/AddChannelSuccess'
 import Channel from './Pages/Channel'
+import AdminRoute from './AdminRoute'
+import AdminDashboard from './Pages/AdminDashboard'
+import PrivateRoute from './PrivateRoute'
+import UserHome from './Pages/UserHome'
 
 
 
@@ -42,6 +46,10 @@ const MyRoutes = () => {
 
                 <Route exact path='/bots' component={Bots}/>
                 <Route exact path='/channel' component={Channel}/>
+
+                <AdminRoute exact path='/admin/dashboard' component={AdminDashboard}/>
+
+                <PrivateRoute exact path='/user/home' component ={UserHome}/>
                 {/* <Route exact path='/test' component={Test}/> */}
             </Routes>
         </BrowserRouter>

@@ -3,7 +3,8 @@ import Footer from '../layout/Footer'
 import Nav from '../layout/Nav'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { addChannel } from '../api/channelapi'
+// import { addChannel } from '../api/channelapi'
+
 
 const AddChannel = () => {
     const [name, setName] = useState("")
@@ -17,9 +18,9 @@ const AddChannel = () => {
     const dislike = 0;
     const dispatch = useDispatch()
 
-    const AddChannel = (e) => {
-        e.preventDefault()
-        addChannel({name, type, description, link})
+    const addChannel = (e) => {
+        // e.preventDefault()
+        addChannel({name, type, description})
         // .then(res=>res.json())
             .then(data => {
                 if (data.error) {

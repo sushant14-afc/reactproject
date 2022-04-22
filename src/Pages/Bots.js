@@ -25,8 +25,7 @@ const Bots = () => {
 
     return (
         <>
-            <Nav />
-            Displaying Bots
+            
             <h3>BOT List</h3>
 
             <div className='container mx-auto'>
